@@ -68,4 +68,4 @@ library(reshape2)
 resultDataMelted <- melt(resultData, id = c("subject", "activity"))
 resultDataMean <- dcast(resultDataMelted, subject + activity ~ variable, mean)
 
-write.csv(resultDataMean, "tidy.csv", row.names = FALSE, quote = FALSE)
+write.table(resultDataMean, "tidy.txt", row.names = FALSE, quote = FALSE)
